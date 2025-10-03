@@ -18,3 +18,11 @@ static.gmtx.ru {
         header_up X-Real-IP {remote}
     }
 }
+
+chat.gmtx.ru {
+    reverse_proxy https://89.179.122.36:8443 {
+        transport http {
+            tls_insecure_skip_verify
+        }
+    }
+}
